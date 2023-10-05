@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.nav {
+    width: 100%;
+    background-color: #FFD3A1;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav-header {
+    display: inline;
+}
+.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    position: relative;
+    left: 40px;
+}
+.nav-btn {
+    display: none;
+}
+.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    position: relative;
+    right: 40px;
+}
+.nav-links a {
+    display: inline-block;
+    padding: 13px 23px 13px 23px;
+    text-decoration: none;
+    color: black;
+}
+#nav-check {
+    display: none;
+}
+.about{
+    background-color: #FFE781;
+    padding: 60px;
+}
+.about-text{
+    padding-top: 50px;
+}
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.image-1{
+    width: 70%;
+    height: auto;
+    float: right;
+}
+.heading{
+    font-size: 50px;
+    padding-top: 10px;
+}
+.text{
+    padding-top: 10px;
+    font-size: 20px;
+}
+.publications{
+    padding: 60px 60px 0 60px;
+    text-align: center;
+}
+.publications p{
+    max-width: 60%;
+    margin: 0 auto;
+}
+.paper-p{
+    max-width: 60%;
+    margin: 0 auto;
+}
+.papers-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.image-2{
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    border: 5px solid black;
+    padding: 10px;
+}
+.hobbies{
+    padding: 60px;
+    text-align: center;
+    background-color: #FFE781;
+    margin-top: 60px;
+}
+.hobby-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.h-item{
+    margin-top: 50px;
+}
+.h-item h4{
+    padding-top: 10px;
+    font-weight: bold;
+}
+.h-item p{
+    padding-top: 10px;
+}
+.gallery{
+    padding: 60px;
+    text-align: center;
+}
+.pics-grid{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    margin-top: 50px;
+}
+.image-3{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.blog{
+    padding: 60px;
+    text-align: center;
+    background-color: #FFD3A1;
+}
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+.article{
+    margin-top: 50px;
+    border: 2px solid black;
+    padding: 10px;
+}
+.article h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.image-4{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.footer{
+    background-color: #FFE781;
+    padding: 60px;
+    text-align: center;
+}
+.list{
+   list-style: none;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    grid-auto-flow: column;
+}
+@media (max-width: 767px) {
+    .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav-btn label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    #nav-check:checked ~ .nav-btn label {
+       background-color: black;
+    }
+    .nav-btn label span {
+        display: block;
+        width: 25px;
+        height: 5px;
+        border-top: 2px solid #FFE781;
+        position: relative;
+        top: 10px;
+    }
+    .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: black;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 60px;
+        left: 0px;
+    }
+    .nav-links a {
+        display: block;
+        width: 100%;
+        color: white;
+    }
+    #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+    .nav-title{
+        position: relative;
+        left: 0;
+    }
+    .about-grid , .papers-grid , .hobby-grid , .pics-grid , .blog-grid{
+        grid-template-columns: 100%;
+    }
+    .about , .publications , .hobbies , .gallery , .blog{
+        padding: 20px;
+    }
+    .about-text{
+        padding-top: 0;
+    }
+    .heading{
+        font-size: 30px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    .image-1{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .publications p , .paper-p{
+        min-width: 100%;
+    }
+    .image-2{
+        margin-top: 30px;
+        width: 80%;
+        height: auto;
+    }
+    .h-item , .article{
+        margin-top: 20px;
+    }
+}
